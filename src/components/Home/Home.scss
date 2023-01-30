@@ -1,0 +1,54 @@
+.home {
+    position: relative;
+    height: 55rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #293264;
+
+    &__top-img {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    &__main {
+        max-width: 30rem;
+
+        &__hero {
+            margin: 0;
+            font-weight: 700;
+            font-size: 3.2rem;
+            line-height: 3.7rem;
+        }
+
+        &__desc {
+            font-weight: 400;
+            font-size: 1.6rem;
+            line-height: 1.9rem;
+        }
+
+        &__start {
+            font-family: inherit;
+            background: #4D5B9E;
+            border-radius: 1.5rem;
+            font-weight: 500;
+            font-size: 1.6rem;
+            line-height: 1.9rem;
+            color: #F5F7FB;
+            border: none;
+            width: 19rem;
+            height: 5.5rem;
+            margin-top: 2.5rem;
+            cursor: pointer;
+        }
+    }
+
+    &__bottom-img {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+}
