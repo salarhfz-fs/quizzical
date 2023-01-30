@@ -1,0 +1,46 @@
+.quiz {
+    position: relative;
+    padding: 4rem 7rem;
+
+    &__top-img {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    &__result {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        margin-top: 2.5rem;
+
+        &__check,
+        &__play-again {
+            font-family: inherit;
+            background: #4D5B9E;
+            border-radius: 1.5rem;
+            font-weight: 500;
+            font-size: 1.6rem;
+            line-height: 1.9rem;
+            color: #F5F7FB;
+            border: none;
+            width: 19rem;
+            height: 5.5rem;
+            cursor: pointer;
+        }
+
+        &__score {
+            font-weight: 700;
+            font-size: 1.3rem;
+            line-height: 1.5rem;
+            color: #293264;
+        }
+    }
+
+    &__bottom-img {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+}
