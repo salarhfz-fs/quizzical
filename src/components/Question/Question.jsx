@@ -4,7 +4,6 @@ import './Question.scss'
 
 function Question(props) {
     const [choices, setChoices] = useState([])
-    const [selected, setSelected] = useState('')
 
     useEffect(() => {
         const allChoices = [...props.incorrect_answers, props.correct_answer]
@@ -14,9 +13,9 @@ function Question(props) {
 
     function handleClick(answer) {
         if (!props.isPlaying) return
-        setSelected(answer)
+        props.onAnswer(props.question, answer)
     }
-    
+
     return (
         <div className="question">
             <h3 className='question__q'>{props.question}</h3>
@@ -27,10 +26,10 @@ function Question(props) {
                         onClick={() => handleClick(choice)}
                         className={`
                     question__a__item
-                    ${props.isPlaying && selected === choice ? 'question__a__item--selected' : ''}
+                    ${props.isPlaying && props.userAnswer === choice ? 'question__a__item--selected' : ''}
                     ${!props.isPlaying && props.correct_answer !== choice ? 'question__a__item--weak' : ''}
                     ${!props.isPlaying && props.correct_answer === choice ? 'question__a__item--correct' : ''}
-                    ${!props.isPlaying && choice === selected && props.correct_answer !== selected ? 'question__a__item--incorrect' : ''}
+                    ${!props.isPlaying && choice === props.userAnswer && props.correct_answer !== props.userAnswer ? 'question__a__item--incorrect' : ''}
                     `}>
                         {choice}
                     </button>
