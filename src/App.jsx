@@ -1,17 +1,13 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import Home from './components/Home'
 import Quiz from './components/Quiz'
-
-import './App.scss'
 import useFetch from './hooks/useFetch'
 
-function App() {
-  const [currentPage, setCurrentPage] = useState(localStorage.getItem('currentPage') || 'home')
-  const fetchResult = useFetch('https://opentdb.com/api.php?amount=10&category=23&difficulty=easy&type=multiple')
+import './App.scss'
 
-  useEffect(() => {
-    localStorage.setItem('currentPage', currentPage)
-  }, [currentPage])
+function App() {
+  const [currentPage, setCurrentPage] = useState('home')
+  const fetchResult = useFetch('https://opentdb.com/api.php?amount=10&category=23&difficulty=easy&type=multiple')
 
   function togglePage(page) {
     setCurrentPage(page)
