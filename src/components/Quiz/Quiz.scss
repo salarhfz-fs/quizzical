@@ -19,15 +19,23 @@
         &__play-again {
             font-family: inherit;
             background: #4D5B9E;
+            font-weight: 700;
+            font-size: 1.2rem;
+            line-height: 1.2rem;
             border-radius: 1.5rem;
-            font-weight: 500;
-            font-size: 1.6rem;
-            line-height: 1.9rem;
             color: #F5F7FB;
             border: none;
-            width: 19rem;
-            height: 5.5rem;
             cursor: pointer;
+        }
+
+        &__check {
+            width: 12rem;
+            height: 3.5rem;
+        }
+
+        &__play-again {
+            width: 10rem;
+            height: 3rem;
         }
 
         &__score {
